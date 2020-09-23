@@ -1,11 +1,10 @@
 class UsersController < ApplicationController
-  # 以下のアクションを追加
   def index
     @users = User.all
   end
 
   def new
-    @user = User.new
+    @user = User.new 
   end
 
   def create
@@ -21,7 +20,7 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.update(user_params)
   end
-
+  
   def destroy
     user = User.find(params[:id])
     user.destroy
